@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+    <title>To-Do List App</title>
+    <script type="module" crossorigin src="/to-do-list-app/assets/index.7f2919f0.js"></script>
+    <link rel="stylesheet" href="/to-do-list-app/assets/index.b91d79f5.css">
+  </head>
+  <body>
+    <div id="app">
+      <form id="todo-form">
+        <h1>To-Dos</h1>
+        <div>
+          <input type="text" name="content" id="input-field">
+         <input type="submit" value="+" id="submit-btn">
+        </div>  
+      </form>
+
+      <div class="radio-btns">
+        <label for="radioAll" class="container">
+          <input type="radio" name="radio-btn" value="all" id="radioAll" checked>All
+          <span class="checkmark"></span>
+        </label>
+        <label for="radioComp" class="container">
+          <input type="radio" name="radio-btn" value="completed" id="radioComp">Completed
+          <span class="checkmark"></span>
+        </label>
+        <label for="radioUn" class="container">
+          <input type="radio" name="radio-btn"  value="uncompleted" id="radioUn" >Uncompleted
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      
+      <div class="to-do-container"></div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/d1568795b7.js" crossorigin="anonymous"></script>
+  </body>
+</html>
