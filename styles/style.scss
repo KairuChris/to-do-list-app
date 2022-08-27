@@ -29,7 +29,7 @@ form{
 
         #input-field{
             font-size: 15px;
-            min-width: 287px;
+            min-width: 260px;
             padding: 10px;
             margin-right: 5px;
             border-radius: 5px;
@@ -69,7 +69,7 @@ form{
     margin-left: auto;
     margin-right: auto;
     background-color: #393E46;
-    width: 330px;
+    width: 305px;
     padding: 5px 3px;
     border-radius: 5px;
     color: $light;
@@ -191,32 +191,46 @@ form{
         }
 
         .done-btn{
-            padding: 7px 10px;
+            padding: 7px 5px;
             color: $light;
             background-color: $lightGreen;
             color: $Dark;
             border: none;
             border-radius: 5px;
             margin-right: 5px;
-            width: 34px;
-            height: 34px;
+            width: 25px;
+            height: 25px;
         }
         
         .delete-btn{
-            padding: 5px 10px;
+            padding: 5px 1px;
             background-color: crimson;
             color: $Dark;
             font-weight: 700;
             border: none;
             border-radius: 5px;
-            width: 34px;
-            height: 34px;
+            width: 25px;
+            height: 25px;
         }
     }
 }
 .delete-transition{
     transform: translateX(-10px);
     opacity: 0;
+}
+@media (min-width:375px){
+    .to-do-container{
+        .task-container{
+            .done-btn{
+                width: 34px;
+                height: 34px;
+            }
+            .delete-btn{
+                width: 34px;
+                height: 34px;
+            }
+        }
+    }
 }
 
 @media (max-width: 780px){

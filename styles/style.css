@@ -39,7 +39,7 @@ form div {
 }
 form div #input-field {
   font-size: 15px;
-  min-width: 287px;
+  min-width: 260px;
   padding: 10px;
   margin-right: 5px;
   border-radius: 5px;
@@ -74,7 +74,7 @@ form div #submit-btn:hover {
   margin-left: auto;
   margin-right: auto;
   background-color: #393E46;
-  width: 330px;
+  width: 305px;
   padding: 5px 3px;
   border-radius: 5px;
   color: #EEEEEE;
@@ -181,25 +181,25 @@ form div #submit-btn:hover {
   cursor: pointer;
 }
 .to-do-container .task-container .done-btn {
-  padding: 7px 10px;
+  padding: 7px 5px;
   color: #EEEEEE;
   background-color: #4ECCA3;
   color: #232931;
   border: none;
   border-radius: 5px;
   margin-right: 5px;
-  width: 34px;
-  height: 34px;
+  width: 25px;
+  height: 25px;
 }
 .to-do-container .task-container .delete-btn {
-  padding: 5px 10px;
+  padding: 5px 1px;
   background-color: crimson;
   color: #232931;
   font-weight: 700;
   border: none;
   border-radius: 5px;
-  width: 34px;
-  height: 34px;
+  width: 25px;
+  height: 25px;
 }
 
 .delete-transition {
@@ -207,6 +207,16 @@ form div #submit-btn:hover {
   opacity: 0;
 }
 
+@media (min-width: 375px) {
+  .to-do-container .task-container .done-btn {
+    width: 34px;
+    height: 34px;
+  }
+  .to-do-container .task-container .delete-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
 @media (max-width: 780px) {
   .to-do-container {
     align-items: center;
