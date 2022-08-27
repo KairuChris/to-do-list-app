@@ -171,8 +171,7 @@ form{
         p{
             background-color: $medDark;
             color: $light;
-            margin-right: 5px;
-            width: 250px;
+            width: 240px;
             word-wrap: break-word;
             padding: 7px;
             border-radius: 5px;
@@ -197,7 +196,7 @@ form{
             color: $Dark;
             border: none;
             border-radius: 5px;
-            margin-right: 5px;
+            margin-right: 10px;
             width: 25px;
             height: 25px;
         }
@@ -211,6 +210,7 @@ form{
             border-radius: 5px;
             width: 25px;
             height: 25px;
+            margin-left: 10px;
         }
     }
 }

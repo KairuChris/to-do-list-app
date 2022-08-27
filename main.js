@@ -61,9 +61,9 @@ function RenderList () {
   
     task.innerHTML = `<p class="content">${item.content}</p>`
     deleteButton.innerHTML = "X"
-  
-    listItemContainer.appendChild(task)
     listItemContainer.appendChild(doneButton)
+    listItemContainer.appendChild(task)
+    
     listItemContainer.appendChild(deleteButton)
     listContainer.appendChild(listItemContainer)
 
