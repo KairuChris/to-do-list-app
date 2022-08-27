@@ -1,0 +1,234 @@
+@forward 'globals';
+
+$light: #EEEEEE;
+$medDark: #393E46;
+$lightGreen: #4ECCA3;
+$Dark: #232931;
+body{
+    background-color: #232931;
+}
+#app{
+    padding: 20px;
+}
+form{
+    text-align: center;
+    margin-top: 50px;
+
+    h1{
+        color: $light;
+        background-color: $medDark;
+        width: 250px;
+        margin: 0 auto;
+        padding: 10px 5px;
+        border-radius: 10px;
+    }
+
+    div{
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        #input-field{
+            font-size: 15px;
+            min-width: 287px;
+            padding: 10px;
+            margin-right: 5px;
+            border-radius: 5px;
+            border: 3px solid $lightGreen;
+            background-color: $medDark;
+            color: $light;
+            transition: .3s;
+        
+            &:focus{
+               border: 3px solid #26634f;
+               outline: none;
+            }
+        }
+
+        #submit-btn{
+            padding: 10px 10px;
+            border-radius: 5px;
+            width: 35px;
+            border: none;
+            background-color: #4ECCA3;
+            color: $Dark;
+            font-size: 15px;
+            cursor: pointer;
+            transition: .3s ;
+
+            &:hover{
+                background-color: rgb(68, 161, 132);
+            }
+        }
+    }
+}
+
+.radio-btns{
+    text-align: center;
+    margin-top: -28px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #393E46;
+    width: 330px;
+    padding: 5px 3px;
+    border-radius: 5px;
+    color: $light;
+
+    label{
+        cursor: pointer;
+    }
+    label:not(:last-child){
+        margin-right: 10px;
+    }
+    input{
+        cursor: pointer;
+    }
+
+    /* The container */
+.container {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 15px;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+       top: 4.9px;
+      left: 4.9px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+  }
+}
+
+.to-do-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .task-container{
+        display: flex;
+        align-items: center;
+        transition: .3s;
+        margin-bottom: 25px;
+
+        &.done{
+            opacity: .5;
+
+            &.delete-transition{
+                opacity: 0;
+            }
+        }
+
+        p{
+            background-color: $medDark;
+            color: $light;
+            margin-right: 5px;
+            width: 250px;
+            word-wrap: break-word;
+            padding: 7px;
+            border-radius: 5px;
+
+            &:focus{
+                outline: none;
+            }
+        }
+
+        &.done p{
+            text-decoration: line-through;
+        }
+        
+        button{
+            cursor: pointer;
+        }
+
+        .done-btn{
+            padding: 7px 10px;
+            color: $light;
+            background-color: $lightGreen;
+            color: $Dark;
+            border: none;
+            border-radius: 5px;
+            margin-right: 5px;
+            width: 34px;
+            height: 34px;
+        }
+        
+        .delete-btn{
+            padding: 5px 10px;
+            background-color: crimson;
+            color: $Dark;
+            font-weight: 700;
+            border: none;
+            border-radius: 5px;
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
+.delete-transition{
+    transform: translateX(-10px);
+    opacity: 0;
+}
+
+@media (max-width: 780px){
+    .to-do-container{
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 780px){
+    .task-container{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
